@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 0.27rem;
+  line-height: 1.5;
+  overflow-x: hidden;
+  color: #333;
+  background-color: #f1f1f1;
+}
+.adv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.9rem;
+  z-index: 999;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+.adv .spr_logo {
+  margin-left: 0.34rem;
+  margin-right: 0.24rem;
+}
+.adv .spr_download {
+  margin-right: 0.32rem;
+}
+.adv .title {
+  flex: 1;
+  color: #FFF;
+}
+.adv .title h2 {
+  font-size: 0.26rem;
+  font-weight: normal;
+}
+.adv .title p {
+  font-size: 0.16rem;
+  color: #666;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ol,
+ul {
+  list-style: none;
+}
+.nav {
+  width: 100%;
+  height: 0.84rem;
+  margin-top: 0.9rem;
+  background: #db9e3f;
+  display: flex;
+  align-items: center;
+}
+.nav a {
+  flex: 1;
+  text-align: center;
+  line-height: 0.84rem;
+  color: #FFF;
+}
+.nav a:hover {
+  cursor: pointer;
+}
+.nav a.active span {
+  position: relative;
+}
+.nav a.active span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.1rem;
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  background-color: #FFF;
+}
+img {
+  display: inline-block;
+}
+.slider-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.slider-wrapper .slider-item {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 3.38rem;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+.banner .dot {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  right: 0.2rem;
+  bottom: 0.2rem;
+  height: 0.17rem;
+}
+.banner .dot span {
+  display: inline-block;
+  margin-left: 0.16rem;
+  height: 0.17rem;
+  width: 0.17rem;
+  border-radius: 2px;
+  background-color: white;
+}
+.banner .dot span.active {
+  background-color: #4b67af;
+}
+.menu {
+  margin-top: 0.2rem;
+  background-color: #FFF;
+}
+.menu .menu-list {
+  display: flex;
+  overflow-x: scroll;
+}
+.menu .menu-list a {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  border-right: 1px solid rgba(204, 204, 204, 0.5);
+}
+.menu .expand {
+  padding: 0.1rem 0;
+  background: #f9f9f9;
+  text-align: center;
+  font-size: 12px;
+}
+.block-container {
+  width: 100%;
+  padding: 0 0.2rem;
+  background-color: #fff;
+}
+.block-container .block-header {
+  border-bottom: 1px solid #d4d9de;
+}
+.block-container .block-header .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 0;
+}
+.block-container .block-header .title h3 {
+  flex: 1;
+  padding-left: 0.15rem;
+  font-weight: normal;
+}
+.block-container .block-main .block-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.1rem;
+}
+.block-container .block-main .block-menu a {
+  position: relative;
+  display: inline-block;
+  padding: 0.1rem 0;
+}
+.block-container .block-main .block-menu a:last-child {
+  margin-right: 0;
+}
+.block-container .block-main .block-menu a.active {
+  color: #db9e3f;
+}
+.block-container .block-main .block-menu a.active::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #db9e3f;
+}
+.block-container .block-main .menu3 {
+  justify-content: start;
+}
+.block-container .block-main .menu3 a {
+  margin-right: 0.8rem;
+}
+.block-container .block-main .block-slider {
+  margin-top: 0.3rem;
+}
+.news .block-slider .slider-item li {
+  margin-bottom: 0.3rem;
+}
+.news .block-slider .slider-item li a {
+  display: flex;
+  position: relative;
+  padding-left: 0.7rem;
+  height: 0.5rem;
+}
+.news .block-slider .slider-item li a .title {
+  flex: 1;
+  display: inline-block;
+  font-size: 0.3rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.news .block-slider .slider-item li a .time {
+  font-size: 0.24rem;
+  color: #999;
+}
+.news .block-slider .slider-item li a::after {
+  position: absolute;
+  left: 0;
+  padding: 0.02rem 0.04rem;
+  font-size: 0.2rem;
+  border: 1px solid;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.news .block-slider .slider-item li a.hot::after {
+  color: #ff3636;
+  content: "热门";
+}
+.news .block-slider .slider-item li a.news::after {
+  color: #1e96ab;
+  content: "新闻";
+}
+.news .block-slider .slider-item li a.notice::after {
+  color: #f09a37;
+  content: "通知";
+}
+.news .block-slider .slider-item li a.activity::after {
+  color: #ff3636;
+  content: "活动";
+}
+.news .block-slider .slider-item li a.match::after {
+  color: #4d9cff;
+  content: "赛事";
+}
+.heros {
+  margin-top: 0.5rem;
+}
+.heros .slider-wrapper {
+  overflow-y: hidden;
+}
+.heros .slider-wrapper .slider-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.heros .slider-wrapper .slider-item a {
+  display: flex;
+  text-align: center;
+  height: 100px;
+  padding: 0 0.1rem 0.1rem 0;
+  width: 20%;
+  flex-direction: column;
+}
+.heros .slider-wrapper .slider-item a img {
+  border-radius: 4px;
+  width: 100%;
+}
+.heros .slider-wrapper .slider-item a span {
+  margin-top: 0.1rem;
+}
+.videos .slider-wrapper .slider-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 0.2rem;
+  column-gap: 0.1rem;
+}
+.videos .slider-wrapper .slider-item a img {
+  width: 100%;
+  height: 1.9rem;
+}
+.videos .slider-wrapper .slider-item a .title {
+  font-size: 0.26rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.videos .slider-wrapper .slider-item a .desc {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.2rem;
+  color: #7a7a80;
+}
+.videos .slider-wrapper .slider-item a .desc .num i {
+  vertical-align: -0.02rem;
+  margin-right: 0.1rem;
+}
+.load-more {
+  height: 0.7rem;
+  line-height: 0.7rem;
+  background: #FFF;
+  border-bottom: 1px solid #d4d9de;
+}
+.load-more a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #7a7a80;
+  text-align: center;
+  position: relative;
+}
+.load-more a::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #cdcdd1;
+}
